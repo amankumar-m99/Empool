@@ -1,0 +1,73 @@
+<div>
+  <form class="container my-5 w-50 border p-5">
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" aria-describedby="firstNameHelp">
+      </div>
+      <div class="mb-3">
+        <label for="middleName" class="form-label">Middle Name</label>
+        <input type="text" class="form-control" id="middleName" aria-describedby="firstNameHelp">
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label mr-5">Email address</label>
+        <span class="mx-5">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">&nbsp;
+          <label class="form-check-label" for="exampleCheck1">Autogenerate email address and password</label>
+        </span>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="employeeType" class="form-label">Employee Type</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="employeeType" id="standardEmployeeRadio">
+          <label class="form-check-label" for="standardEmployeeRadio">Standard</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="employeeType" id="adminEmployeeRadio">
+          <label class="form-check-label" for="adminEmployeeRadio">Admin</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="contactNumber" class="form-label">Contact Number</label>
+        <input type="text" class="form-control" id="contactNumber">
+      </div>
+      <div class="mb-3">
+        <label for="emergencyContactNumber" class="form-label">Emergency Contact Number</label>
+        <input type="text" class="form-control" id="emergencyContactNumber">
+      </div>
+      <div class="mb-3">
+        <label for="dateOfBirth" class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" id="dateOfBirth">
+      </div>
+      <div class="mb-3">
+        <label for="maritalStatus" class="form-label">Marital Status</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="maritalStatus" id="unmarried">
+          <label class="form-check-label" for="unmarried">Unmarried</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="maritalStatus" id="married">
+          <label class="form-check-label" for="married">Married</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="maritalStatus" id="divorced">
+          <label class="form-check-label" for="divorced">Divorced</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="maritalStatus" id="separated">
+          <label class="form-check-label" for="separated">Separated</label>
+        </div>
+      </div>
+      <hr/>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
