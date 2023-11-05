@@ -3,19 +3,31 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { Employee } from '../model/employee';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  _url ="";
+  baseurl ="http://localhost:8080";
+  employeesUrl = this.baseurl + "/employees";
+  employeeUrl = this.baseurl + "/employee";
 
   constructor(private _httpClient:HttpClient) { }
 
-  // getCard(cardNumber:string):Observable<Card>{
-  //   return this._httpClient.get<Card>(this._url).pipe(catchError(this.handleError));
-  // }
+  getEmployees():Observable<Employee[]>{
+    return this._httpClient.get<Employee[]>(this.employeesUrl).pipe(catchError(this.handleError));
+  }
+  getEmployee():Observable<Employee>{
+    return this._httpClient.get<Employee>(this.employeeUrl).pipe(catchError(this.handleError));
+  }
+
+  postEmployee(employee:Employee):Observable<Employee>{
+    console.log('posting', employee);
+    console.log(this.employeeUrl);
+    return this._httpClient.post<Employee>(this.employeeUrl, employee).pipe(catchError(this.handleError));
+  }
   
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
